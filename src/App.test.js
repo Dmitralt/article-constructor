@@ -1,8 +1,19 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, cleanup } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App Component', () => {
+  afterEach(cleanup);
+
+  test('renders the title', () => {
+    render(<App />);
+    const titleElement = screen.getByText(/Articles constructor/i);
+    expect(titleElement).toBeInTheDocument();
+  });
+
+  test('renders the ArticleConstructor component', () => {
+    render(<App />);
+    const articleConstructorElement = screen.getByTestId('article-constructor');
+    expect(articleConstructorElement).toBeInTheDocument();
+  });
 });
+
