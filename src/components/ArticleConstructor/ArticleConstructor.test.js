@@ -1,20 +1,20 @@
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
 import ArticleConstructor from './ArticleConstructor';
-import Modal from './modal/Modal';
-import HeaderBlock from './blocks/HeaderBlock/HeaderBlock';
-import TextBlock from './blocks/TextBlock/TextBlock';
-import ImageTextBlock from './blocks/ImageTextBlock/ImageTextBlock';
+import Modal from '../modal/Modal';
+import HeaderBlock from '../blocks/HeaderBlock/HeaderBlock';
+import TextBlock from '../blocks/TextBlock/TextBlock';
+import ImageTextBlock from '../blocks/ImageTextBlock/ImageTextBlock';
 
-jest.mock('./modal/Modal', () => (props) => (
+jest.mock('../modal/Modal', () => (props) => (
     <div data-testid="modal">{props.children}</div>
 ));
-jest.mock('./blocks/HeaderBlock/HeaderBlock', () => (props) => (
+jest.mock('../blocks/HeaderBlock/HeaderBlock', () => (props) => (
     <div data-testid="header-block">{props.children}</div>
 ));
-jest.mock('./blocks/TextBlock/TextBlock', () => (props) => (
+jest.mock('../blocks/TextBlock/TextBlock', () => (props) => (
     <div data-testid="text-block">{props.children}</div>
 ));
-jest.mock('./blocks/ImageTextBlock/ImageTextBlock', () => (props) => (
+jest.mock('../blocks/ImageTextBlock/ImageTextBlock', () => (props) => (
     <div data-testid="image-text-block">{props.children}</div>
 ));
 

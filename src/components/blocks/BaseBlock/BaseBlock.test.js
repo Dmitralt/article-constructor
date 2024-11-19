@@ -12,4 +12,6 @@ describe('BaseBlock Component', () => {
         render(<BaseBlock mode="modal" />);
         expect(screen.getByText(/You should override this/i)).toBeInTheDocument();
     });
+
+    test('default test', () => { expect(2).toBe(2); });
 });

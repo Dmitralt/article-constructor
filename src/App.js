@@ -1,5 +1,5 @@
 import React from 'react';
-import ArticleConstructor from './components/ArticleConstructor';
+import ArticleConstructor from './components/ArticleConstructor/ArticleConstructor';
 import './App.css';
 
 function App() {

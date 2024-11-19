@@ -11,6 +11,7 @@ export const baseStyles = {
         width: '100%',
         padding: '10px',
         fontSize: '16px',
+        whiteSpace: 'pre-wrap',
         fontFamily: 'Arial, sans-serif',
         borderRadius: '4px',
         border: '1px solid #ccc',
